@@ -1,0 +1,1300 @@
+[robosuite WARNING] No private macro file found! (macros.py:53)
+[robosuite WARNING] It is recommended to use a private macro file (macros.py:54)
+[robosuite WARNING] To setup, run: python /home/whdydwo0431/miniconda3/envs/qwen/lib/python3.10/site-packages/robosuite/scripts/setup_macros.py (macros.py:55)
+Gym has been unmaintained since 2022 and does not support NumPy 2.0 amongst other critical functionality.
+Please upgrade to Gymnasium, the maintained drop-in replacement of Gym, or contact the authors of your software and request that they upgrade.
+Users of this version of Gym should be able to simply replace 'import gym' with 'import gymnasium as gym' in the vast majority of cases.
+See the migration guide at https://gymnasium.farama.org/introduction/migration_guide/ for additional information.
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+[CUDA 설정] expandable_segments:True,max_split_size_mb:256
+Actor 모델 초기화 중...
+Planner 서버(openvla_inference_code.py)가 실행 중이어야 합니다.
+[VRAM 감지] GPU: NVIDIA GeForce RTX 4070 SUPER, VRAM: 12.0 GB
+[VRAM 설정] 12GB: group=2, max_new=40, lora_r=4
+Processor 로드 중...
+[add_tokenizer_vocab] 추가된 token 수: 0
+[add_tokenizer_vocab] tokenizer 새 크기: 49536
+SmolVLM2-500M loading...
+Loading weights:   0%|          | 0/489 [00:00<?, ?it/s]Loading weights:   0%|          | 1/489 [00:00<01:22,  5.89it/s]Loading weights:   0%|          | 2/489 [00:00<01:20,  6.06it/s]Loading weights:   1%|          | 3/489 [00:00<01:21,  5.94it/s]Loading weights:   5%|▍         | 24/489 [00:00<00:07, 62.13it/s]Loading weights:   9%|▉         | 45/489 [00:00<00:04, 103.75it/s]Loading weights:  14%|█▍        | 68/489 [00:00<00:03, 136.66it/s]Loading weights:  18%|█▊        | 87/489 [00:00<00:02, 151.80it/s]Loading weights:  22%|██▏       | 110/489 [00:01<00:02, 173.88it/s]Loading weights:  27%|██▋       | 133/489 [00:01<00:01, 185.88it/s]Loading weights:  33%|███▎      | 159/489 [00:01<00:01, 203.23it/s]Loading weights:  38%|███▊      | 185/489 [00:01<00:01, 215.54it/s]Loading weights:  43%|████▎     | 208/489 [00:01<00:01, 218.21it/s]Loading weights:  47%|████▋     | 231/489 [00:01<00:01, 220.15it/s]Loading weights:  53%|█████▎    | 257/489 [00:01<00:01, 226.84it/s]Loading weights:  57%|█████▋    | 280/489 [00:01<00:00, 226.42it/s]Loading weights:  65%|██████▌   | 319/489 [00:01<00:00, 273.70it/s]Loading weights:  76%|███████▋  | 373/489 [00:01<00:00, 350.28it/s]Loading weights:  88%|████████▊ | 429/489 [00:02<00:00, 410.49it/s]Loading weights:  98%|█████████▊| 479/489 [00:02<00:00, 434.90it/s]Loading weights: 100%|██████████| 489/489 [00:02<00:00, 225.17it/s]
+Loading weights:   0%|          | 0/264 [00:00<?, ?it/s]Loading weights: 100%|██████████| 264/264 [00:00<00:00, 9246.12it/s]
+[transformers] The new embeddings will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+[transformers] The new lm_head weights will be initialized from a multivariate normal distribution that has old embeddings' mean and covariance. As described in this article: https://nlp.stanford.edu/~johnhew/vocab-expansion.html. To disable this, use `mean_resizing=False`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[resize_embeddings] 임베딩 테이블 크기: torch.Size([49536, 960])
+[init_action_embeddings] lm_head gradient 허용 완료!
+trainable params: 794,624 || all params: 508,768,448 || trainable%: 0.1562
+[sparse hook] 입력/출력 action embedding 행(49280~)만 학습
+[action hook] text_model pre-hook 등록 완료
+[connector hook] image features 캡처 hook 등록 완료
+ActorModel initialization complete!
+[체크포인트 로드] checkpoints/sft_stage2_5
+  완료 | missing=753 unexpected=264
+[action_embeddings] 로드 완료
+[scale ×0.5] text norm: 2.930 | action norm: 3.021
+  [VRAM 모델 로드 후] alloc=606MB reserved=1166MB peak=1013MB
+[info] using task orders [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+태스크: pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate
+
+============================================================
+태스크 2: pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate
+에피소드: 60 | GROUP: 2 | MAX_STEPS: 50
+============================================================
+[optimizer] 학습 파라미터: 100,767,616
+[optimizer] AdamW8bit
+
+[에피소드 1/60]
+==================================================
+[Pass 1] CRITIQUE: The action is not correct.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221><action_222><action_241><action_222><action_222><action_222><action_222><action_222><action_222><action_141><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(112→99), y_move(111→99), z_move(138→99), roll(115→95), pitch(117→95), yaw(142→95), gripper(142→95)
+  [G1 S1] The action is not correct.
+  [G1 S1] action: [-0.22  -0.22  -0.22  -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is a straightforward pick----------------------
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(112→99), y_move(111→99), z_move(138→99), roll(115→99), pitch(117→99), yaw(142→99), gripper(132→99)
+  [G1 S2] The action is a straightforward pick----------------------
+  [G1 S2] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is to place a bowl on a plate and then take the plate and pl
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221>_<action_95>_<action_221>_<action_221>_<action_95>_<action_221>_<action_221>_<action_95>_<action_95>_<action_95>_
+[수정 여부] 수정됨: x_move(114→99), y_move(159→99), z_move(127→99), roll(98→95), pitch(121→95), yaw(133→95), gripper(142→95)
+  [G1 S3] The proposed action is to place a bowl on a plate and then take the plate and place it on the table. The angle of the proposed action is -.05, the roll is -.05, the pitch is -
+  [G1 S3] action: [-0.22  -0.22  -0.22  -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action of picking up the black bowl from the table, placing it on a plate, i
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_95><action_222>_<action_147>_<action_95><action_222>_<action_147>_<action_95><action_222>_<action_99><action_222>_<action_95><action_222>_<action_99><action_222>_<action_95><action_66><end_of_utterance>
+[수정 여부] 수정됨: x_move(112→99), y_move(124→99), z_move(142→99), roll(55→95), pitch(152→222), yaw(109→147), gripper(94→95)
+  [G1 S4] The action of picking up the black bowl from the table, placing it on a plate, is the correct action.
+  [G1 S4] action: [-0.22  -0.22  -0.22  -0.251  0.745  0.157 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: A proposed action that could be performed is to place a black bowl on the table 
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(111→99), z_move(164→99), roll(121→99), pitch(144→99), yaw(135→99), gripper(114→99)
+  [G1 S5] A proposed action that could be performed is to place a black bowl on the table and then to roll the bowl to the bottom right of the table.
+  [G1 S5] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is a simple, yet not well-ified, one. The proposed action is to place
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(112→99), z_move(207→99), roll(76→99), pitch(129→99), yaw(128→99), gripper(134→99)
+  [G1 S6] The action is a simple, yet not well-ified, one. The proposed action is to place a new object on a table, and then place the new object in a place where it can be accessed. The proposed action is not well-
+  [G1 S6] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of rolling a black bowl from the table to the left side of the room i
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(131→99), z_move(221→99), roll(98→99), pitch(218→99), yaw(132→99), gripper(114→99)
+  [G1 S7] The action of rolling a black bowl from the table to the left side of the room is not specified in the text, but it can be inferred that it might be a type of task that involves rolling. However, the specific action required to perform the
+  [G1 S7] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of picking up the bowl from the table center and placing it on the pl
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(175→99), y_move(175→99), z_move(169→99), roll(51→99), pitch(129→99), yaw(137→99), gripper(142→99)
+  [G1 S8] The action of picking up the bowl from the table center and placing it on the plate seems to be a straightforward task. The proposal of x=-0.38, y=-0.38, z=-0.33, roll=
+  [G1 S8] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[Pass 1] CRITIQUE: The proposed action is to place the black bowl on the table in the center of the
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(164→99), z_move(131→99), roll(132→99), pitch(129→99), yaw(137→99), gripper(142→99)
+  [G1 S9] The proposed action is to place the black bowl on the table in the center of the room, take note of the coordinates and orientation, and then open the gripper.
+  [G1 S9] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: A person performs an action involving a black bowl on a table.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(114→99), y_move(159→99), z_move(134→99), roll(55→99), pitch(212→99), yaw(73→99), gripper(136→99)
+  [G1 S10] A person performs an action involving a black bowl on a table.
+  [G1 S10] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action should be done in the direction of the x- the y-, and the z- the z- t
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_95><action_205><action_205><action_16><action_205><action_205><end_of_utterance>
+[수정 여부] 수정됨: x_move(153→99), y_move(112→99), z_move(201→95), roll(94→95), pitch(142→95), yaw(157→221), gripper(133→221)
+  [G1 S11] The action should be done in the direction of the x- the y-, and the z- the z- the y- to the right.
+  [G1 S11] action: [-0.22  -0.22  -0.251 -0.251 -0.251  0.737  0.737]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action of placing the black bowl on the plate is not a good choice 
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95><action_222>_<action_95><action_222>_<action_86><action_222>_<action_147><end_of_utterance>
+[수정 여부] 수정됨: x_move(112→99), y_move(170→99), z_move(127→99), roll(71→95), pitch(110→95), yaw(142→95), gripper(127→95)
+  [G1 S12] The proposed action of placing the black bowl on the plate is not a good choice for the game. The action is not as easy to perform, and might not fit the constraints of the game.
+  [G1 S12] action: [-0.22  -0.22  -0.22  -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposal is not possible because the coordinates of the proposed objects are
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(127→99), z_move(175→99), roll(32→99), pitch(109→99), yaw(11→99), gripper(93→99)
+  [G1 S13] The proposal is not possible because the coordinates of the proposed objects are not in the area of the table, the proposal is not valid because the object is not placed on the table, the proposal is unclear because it is unclear what the object is, and
+  [G1 S13] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not a reasonable one, it is not possible to place a bowl,
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(163→99), y_move(148→99), z_move(182→99), roll(49→99), pitch(203→99), yaw(56→99), gripper(96→99)
+  [G1 S14] The proposed action is not a reasonable one, it is not possible to place a bowl, close to a plate, in a manner that it would be placed on a plate and without the bowl being in a position that is close to a plate.
+  [G1 S14] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is a roll to the right and a pitch to the right.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(163→99), y_move(148→99), z_move(182→99), roll(53→99), pitch(129→99), yaw(0→99), gripper(255→99)
+  [G1 S15] The action is a roll to the right and a pitch to the right.
+  [G1 S15] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: Pick the black bowl from the table in the center and place it on the table in th
+[Pass 2] ACTION:    pick_up_<action_99><action_222><action_222><action_222><action_222><action_116><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205><action_175><action_189><action_222><action_205><action_205><action_175><action_222><action_222>
+[수정 여부] 수정됨: x_move(115→99), y_move(128→222), z_move(150→222), roll(56→222), pitch(148→222), yaw(207→116), gripper(112→222)
+  [G1 S16] Pick the black bowl from the table in the center and place it on the table in the x-y coordinate system.
+  [G1 S16] action: [-0.22   0.745  0.745  0.745  0.745 -0.086  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action in the task is to place the black bowl on the table near the
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(194→99), y_move(204→99), z_move(133→99), roll(129→99), pitch(218→99), yaw(173→99), gripper(127→99)
+  [G1 S17] The proposed action in the task is to place the black bowl on the table near the center and roll the table around. However, the action is not completely correct because the table should be in the center not at the corner. The action should be to
+  [G1 S17] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[Pass 1] CRITIQUE: The proposed action is not a practical one. It is not a practical action for a r
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_95><action_222><action_190><action_205><action_205><action_205><action_141><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(210→99), y_move(114→99), z_move(156→99), roll(78→95), pitch(132→222), yaw(112→190), gripper(130→205)
+  [G1 S18] The proposed action is not a practical one. It is not a practical action for a robot to perform, because the robot does not have the necessary grippability and can not be opened by a robot. The proposed action is not a practical action,
+  [G1 S18] action: [-0.22  -0.22  -0.22  -0.251  0.745  0.494  0.612]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action that can be proposed is to place the black bowl on top of a plate.
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(151→99), y_move(137→99), z_move(203→99), roll(86→99), pitch(222→99), yaw(142→99), gripper(255→99)
+  [G1 S19] The action that can be proposed is to place the black bowl on top of a plate.
+  [G1 S19] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action here is to place the black bowl on the table at a 0.25-3/4-i
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_<action_81>cent<action_205><action_205><action_156><action_141><action_222><action_222><action_245><action_222><action_205><action_189><action_205><action_175><action_189><action_205><action_175><action_189><action_189><action_205>
+[수정 여부] 수정됨: x_move(119→99), y_move(95→99), z_move(125→95), roll(129→95), pitch(148→95), yaw(127→95), gripper(128→95)
+  [G1 S20] The proposed action here is to place the black bowl on the table at a 0.25-3/4-inch height, at an angle in the direction of the x-.ure the coordinate system.
+  [G1 S20] action: [-0.22  -0.22  -0.251 -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: This action is a task to pick up a black bowl from the table and then place it o
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(119→99), y_move(95→99), z_move(125→99), roll(129→99), pitch(148→99), yaw(127→99), gripper(128→99)
+  [G1 S21] This action is a task to pick up a black bowl from the table and then place it on a plate.
+  [G1 S21] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is to pick the black bowl from the table in the center, place it on t
+[Pass 2] ACTION:    pick_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221><action_222><action_222><action_222><action_222><action_167><action_222><action_222><action_241><action_189><action_205><action_147><action_245><action_245><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_99><action_99><action_99><action_99>
+[수정 여부] 수정됨: x_move(115→99), y_move(112→95), z_move(172→95), roll(162→95), pitch(54→95), yaw(123→95), gripper(142→221)
+  [G1 S22] The action is to pick the black bowl from the table in the center, place it on the black plate in the center, and then open the gripper to release it.
+  [G1 S22] action: [-0.22  -0.251 -0.251 -0.251 -0.251 -0.251  0.737]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is not consistent with a real-- objective.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99><action_222><action_86><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(115→99), y_move(137→99), z_move(157→222), roll(71→86), pitch(95→222), yaw(109→222), gripper(115→222)
+  [G1 S23] The action is not consistent with a real-- objective.
+  [G1 S23] action: [-0.22  -0.22   0.745 -0.322  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not possible since it would require the black bowl to be 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(121→99), y_move(133→99), z_move(175→99), roll(62→99), pitch(135→99), yaw(190→99), gripper(121→99)
+  [G1 S24] The proposed action is not possible since it would require the black bowl to be placed at the top of the table, which is not a possible position for the bowl in the virtual environment.
+  [G1 S24] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action proposed is misicated.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222>_<action_95><action_222>_<action_147>_<action_95><action_222>_<action_99><action_222>_<action_95><action_86><action_222>_<action_147><action_222>_<action_95><action_86><action_222>_<action_147><action_222>_<action_95><action_86><action_81><action_189>
+[수정 여부] 수정됨: x_move(112→99), y_move(83→99), z_move(136→95), roll(99→222), pitch(125→95), yaw(142→222), gripper(110→147)
+  [G1 S25] The action proposed is misicated.
+  [G1 S25] action: [-0.22  -0.22  -0.251  0.745 -0.251  0.745  0.157]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The task is to determine if the proposed action is correct. The proposed action 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(112→99), y_move(124→99), z_move(149→99), roll(81→99), pitch(137→99), yaw(160→99), gripper(127→99)
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [G1 S26] The task is to determine if the proposed action is correct. The proposed action is to pick up the black bowl from the table and place it on the plate. However, the action is incorrect because the action should be to place the bowl and then the
+  [G1 S26] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: It's a little bit off from what I think it would be. It's not going to be the ca
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_208>_<action_208>_<action_99><end_of_utterance>
+[파싱 실패] <action_N> 미생성 → cold start 페널티 대상
+[수정 여부] 수정됨: x_move(112→128), y_move(125→128), z_move(142→128), roll(129→128), pitch(56→128), yaw(174→128), gripper(165→128)
+  [G1 S27] It's a little bit off from what I think it would be. It's not going to be the case that the gripper will be open.
+  [G1 S27] action: [0.008 0.008 0.008 0.008 0.008 0.008 0.008]
+==================================================
+  [reward] 파싱 실패 → -1.0
+==================================================
+[Pass 1] CRITIQUE: The action of picking up the bowl from the table center and placing it on a plat
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(112→99), y_move(125→99), z_move(142→99), roll(129→99), pitch(123→99), yaw(137→99), gripper(133→99)
+  [G1 S28] The action of picking up the bowl from the table center and placing it on a plate is the opposite of what the task asks. The task does not require a bowl. The task is asking for the placement of a bowl on a plate and this task
+  [G1 S28] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is not possible since it is not possible to place a bowl on a plate.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222><action_167><action_222><action_205><action_205><action_156><action_189><action_205><action_205><action_205><action_205><action_109><action_222><action_245><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_156><action_189><action_205><action_214><action_214><action_214><action_214>
+[수정 여부] 수정됨: x_move(141→99), y_move(109→99), z_move(172→95), roll(126→222), pitch(207→167), yaw(189→222), gripper(112→205)
+  [G1 S29] The action is not possible since it is not possible to place a bowl on a plate.
+  [G1 S29] action: [-0.22  -0.22  -0.251  0.745  0.314  0.745  0.612]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is to roll the chair along the floor and place the black bowl on the 
+[Pass 2] ACTION:   <action_50><action_222><action_222><action_141><action_141><action_141><action_141><action_141><end_of_utterance>
+[수정 여부] 수정됨: x_move(122→50), y_move(138→222), z_move(139→222), roll(51→141), pitch(138→141), yaw(100→141), gripper(109→141)
+  [G1 S30] The action is to roll the chair along the floor and place the black bowl on the table in front of the chair.
+  [G1 S30] action: [-0.604  0.745  0.745  0.11   0.11   0.11   0.11 ]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: Place the black bowl on the plate, roll it up 0.24 units, tilt it up 0.08 units,
+[Pass 2] ACTION:    pick_up_the_black_bowl_from_table_center_and_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>
+[수정 여부] 수정됨: x_move(122→99), y_move(137→99), z_move(168→99), roll(97→99), pitch(117→99), yaw(134→99), gripper(127→99)
+  [G1 S31] Place the black bowl on the plate, roll it up 0.24 units, tilt it up 0.08 units, and make it close to the camera.
+  [G1 S31] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The task to be completed is getting the black bowl out of the table and placing 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99><action_222><action_13><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_121><action_189><action_175><action_205><action_205><action_189><action_205><action_214><action_214><action_214><action_214><action_214><action_99><action_99><action_99><action_99><action_99>
+[수정 여부] 수정됨: x_move(112→99), y_move(129→99), z_move(144→222), roll(58→13), pitch(112→222), yaw(136→222), gripper(129→222)
+  [G1 S32] The task to be completed is getting the black bowl out of the table and placing it on the plate.
+  [G1 S32] action: [-0.22  -0.22   0.745 -0.894  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action proposed here is not feasible due to the constraints of the game and 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(153→99), z_move(139→99), roll(62→99), pitch(155→99), yaw(126→99), gripper(127→99)
+  [G1 S33] The action proposed here is not feasible due to the constraints of the game and the positioning of the objects.
+  [G1 S33] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action to pick up a bowl from a table and put it on a plate is incorrect bec
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(141→99), y_move(131→99), z_move(178→99), roll(88→99), pitch(137→99), yaw(142→99), gripper(116→99)
+  [G1 S34] The action to pick up a bowl from a table and put it on a plate is incorrect because you need to put the bowl on the table and then place the plate on the table.
+  [G1 S34] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: This action can be perceived as a simple task to pick up a black bowl from the t
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(151→99), y_move(177→99), z_move(142→99), roll(129→99), pitch(181→99), yaw(131→99), gripper(127→99)
+  [G1 S35] This action can be perceived as a simple task to pick up a black bowl from the table in the center, place it on the plate, and then picking up the right-.
+  [G1 S35] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: the action of placing the black bowl on the table is to simulate a user action o
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99><action_222><end_of_utterance>
+[수정 여부] 수정됨: x_move(141→99), y_move(131→99), z_move(206→99), pitch(84→99), yaw(121→99), gripper(149→222)
+  [G1 S36] the action of placing the black bowl on the table is to simulate a user action of placing a object on a table, and then to simulate the object being put down.
+  [G1 S36] action: [-0.22  -0.22  -0.22  -0.22  -0.22  -0.22   0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action proposes picking up a black bowl from the table at center position, p
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222>_<action_95><action_222><action_86><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_222><action_205><action_205><action_205><action_205><action_141><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(168→99), y_move(125→99), z_move(142→95), roll(129→222), pitch(203→95), yaw(125→222), gripper(114→86)
+  [G1 S37] The action proposes picking up a black bowl from the table at center position, placing it on the plate at 33.77, 3.02, 30.12, at a 2.67 degree roll
+  [G1 S37] action: [-0.22  -0.22  -0.251  0.745 -0.251  0.745 -0.322]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: A vector of the table in the room is located at a height of 3.02 meters below th
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222>_<action_95><action_222>_<action_86><action_222><action_224><action_214><action_222>_<action_147><action_222>_<action_147><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_99><action_99><action_99><action_99><action_99><action_99><action_99>
+[수정 여부] 수정됨: x_move(168→99), y_move(125→99), z_move(142→95), roll(129→222), pitch(203→95), yaw(116→222), gripper(144→86)
+  [G1 S38] A vector of the table in the room is located at a height of 3.02 meters below the bed, and the table is rotated 0.60 degrees to the right. The gripper is open.
+  [G1 S38] action: [-0.22  -0.22  -0.251  0.745 -0.251  0.745 -0.322]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: This action will place the black bowl on the table and place the bowl in its new
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(114→99), y_move(143→99), z_move(130→99), roll(129→99), pitch(143→99), yaw(68→99), gripper(255→99)
+  [G1 S39] This action will place the black bowl on the table and place the bowl in its new position.
+  [G1 S39] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The correct action to take is to place the bowl on the table, but that would req
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(114→99), y_move(143→99), z_move(130→99), roll(129→99), pitch(137→99), yaw(142→99), gripper(127→99)
+  [G1 S40] The correct action to take is to place the bowl on the table, but that would require aligning the bowl with the table's position. So the action would be to place the bowl on the table, but then we would need to align it with the
+  [G1 S40] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is not going to work because the ball is not in the center of the tab
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(168→99), y_move(125→99), z_move(142→95), roll(93→222), pitch(138→222), yaw(151→222), gripper(142→222)
+  [G1 S41] The action is not going to work because the ball is not in the center of the table.
+  [G1 S41] action: [-0.22  -0.22  -0.251  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The pose of the action is that the user has to open the gripper, pick up the bla
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_95><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_78><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_175><action_175><action_141><action_141><action_141><end_of_utterance>
+[수정 여부] 수정됨: x_move(164→99), y_move(109→99), z_move(179→95), roll(141→222), pitch(242→222), yaw(142→222), gripper(255→222)
+  [G1 S42] The pose of the action is that the user has to open the gripper, pick up the black bowl, place it on the plate, and then move it to the table center. The pose is slightly off - the table center is not in the
+  [G1 S42] action: [-0.22  -0.22  -0.251  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The task is to pick up a black bowl from the table in the center and place it on
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(115→99), y_move(143→99), z_move(130→99), roll(76→99), pitch(137→99), yaw(154→99), gripper(127→99)
+  [G1 S43] The task is to pick up a black bowl from the table in the center and place it on the table. However, the problem has some issues with the direction of the proposed action and the action proposed will not be able to move the bowl.
+  [G1 S43] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is not as simple as picking up the object. The proposal includes many
+[Pass 2] ACTION:    place_<action_99>_<action_99><end_of_utterance>
+[파싱 실패] <action_N> 미생성 → cold start 페널티 대상
+[수정 여부] 수정됨: x_move(117→128), y_move(159→128), z_move(134→128), roll(54→128), pitch(99→128), yaw(142→128), gripper(127→128)
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [G1 S44] The action is not as simple as picking up the object. The proposal includes many parameters that would be hard to work with. You would need to know the exact location, the exact way the object is positioned, and the exact orientation of the object.
+  [G1 S44] action: [0.008 0.008 0.008 0.008 0.008 0.008 0.008]
+==================================================
+  [reward] 파싱 실패 → -1.0
+==================================================
+[Pass 1] CRITIQUE: The action is not feasible, it's not possible to place the bowl on the plate fro
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(151→99), y_move(106→99), z_move(179→99), roll(129→99), pitch(216→99), yaw(105→99), gripper(255→99)
+  [G1 S45] The action is not feasible, it's not possible to place the bowl on the plate from the given information.
+  [G1 S45] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is a move to the left, which requires a small force to be applied.
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_95><action_222>_<action_147>_<action_147>_<action_147>_<action_224><action_224><action_224><action_224><action_224><action_224><action_224><action_224><action_224><action_214><action_214><action_214><action_214><action_214><action_214><action_147><action_147><action_147><action_147><action_147><action_147><action_147><action_147><action_147><action_147>
+[수정 여부] 수정됨: x_move(151→99), y_move(110→99), z_move(137→95), roll(129→222), pitch(158→147), yaw(142→147), gripper(142→147)
+  [G1 S46] The action is a move to the left, which requires a small force to be applied.
+  [G1 S46] action: [-0.22  -0.22  -0.251  0.745  0.157  0.157  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not a valid way to pick up the bowl from the table. It wo
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_78>_<action_224>_<action_224>_<action_224>_<action_224>_<action_224>_<action_99>_<action_99><end_of_utterance>
+[수정 여부] 수정됨: x_move(151→99), y_move(106→99), z_move(179→99), roll(129→99), pitch(158→78), yaw(122→224), gripper(142→224)
+  [G1 S47] The proposed action is not a valid way to pick up the bowl from the table. It would require a 3D model of the table and a 2D model of the bowl.
+  [G1 S47] action: [-0.22  -0.22  -0.22  -0.22  -0.384  0.761  0.761]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: Should not be able to get the objective. The proposed action does not meet any o
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_147>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(117→99), y_move(155→99), z_move(134→99), roll(36→99), pitch(161→147), yaw(165→99), gripper(127→99)
+  [G1 S48] Should not be able to get the objective. The proposed action does not meet any of the task criteria.
+  [G1 S48] action: [-0.22  -0.22  -0.22  -0.22   0.157 -0.22  -0.22 ]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action in the proposed task, pick_up_the_black_bowl_from_table_center_and_pl
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(105→99), z_move(129→99), roll(151→99), pitch(2→99), yaw(85→99), gripper(140→99)
+  [G1 S49] The action in the proposed task, pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate, aims to place the black bowl on a plate. It also involves setting
+  [G1 S49] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action of rolling a ball is incorrect, it would be the opposite of 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(151→99), y_move(106→99), z_move(181→99), roll(129→99), pitch(137→99), yaw(142→99), gripper(138→99)
+  [G1 S50] The proposed action of rolling a ball is incorrect, it would be the opposite of rolling.
+  [G1 S50] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action of placing the black bowl on the table in the center and then rolling
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(104→99), z_move(67→99), roll(55→99), pitch(119→99), yaw(150→99), gripper(142→99)
+  [G2 S1] The action of placing the black bowl on the table in the center and then rolling it to the right is the action proposed. However, the action of placing the bowl on the table in the center and then rolling it to the right is not the only
+  [G2 S1] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is a simple manipulation on the part of the task, which is to place a
+[Pass 2] ACTION:    pick_<action_99><action_222><action_190><action_205><action_156><action_189><action_156><action_141><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_205><action_205><action_205><action_214><action_222><action_222><action_214><action_222><action_222><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_214><action_214>
+[수정 여부] 수정됨: x_move(117→99), y_move(129→222), z_move(149→190), roll(50→205), pitch(148→156), yaw(108→189), gripper(142→156)
+  [G2 S2] The action is a simple manipulation on the part of the task, which is to place an object in a specific position and possibly take away it.
+  [G2 S2] action: [-0.22   0.745  0.494  0.612  0.227  0.486  0.227]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The problem is missing a specific action of the gripper. The gripper is not bein
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_208>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(117→99), y_move(129→99), z_move(149→208), roll(60→99), pitch(141→99), yaw(204→99), gripper(127→99)
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [G2 S3] The problem is missing a specific action of the gripper. The gripper is not being moved in any direction, it is being picked up off the table, which doesn't make sense, because the action of the gripper would be picking up something
+  [G2 S3] action: [-0.22  -0.22   0.635 -0.22  -0.22  -0.22  -0.22 ]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is picking up a black bowl and placing it on a plate. The ac
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_95><action_222><action_175><action_222>ort<action_111><action_222><action_189><action_222><action_189><action_224><action_224><action_224><action_224><action_224><action_224><action_224><action_214><action_214><action_214><action_214><action_214><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99>
+[수정 여부] 수정됨: x_move(122→99), y_move(105→99), z_move(127→95), roll(129→222), pitch(137→175), yaw(138→222), gripper(142→111)
+  [G2 S4] The proposed action is picking up a black bowl and placing it on a plate. The action is to place the bowl on a plate.
+  [G2 S4] action: [-0.22  -0.22  -0.251  0.745  0.376  0.745 -0.125]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: Place the bowl on the table, do not lift it, and do not put it back in the bowl
+[Pass 2] ACTION:    pick_up_<action_99>_<action_95><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_141><action_141><action_141><action_141><end_of_utterance>
+[수정 여부] 수정됨: x_move(117→99), y_move(133→95), z_move(170→222), roll(27→222), pitch(196→222), yaw(144→222), gripper(255→222)
+  [G2 S5] Place the bowl on the table, do not lift it, and do not put it back in the bowl
+  [G2 S5] action: [-0.22  -0.251  0.745  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action that should be performed is to place a black bowl on the table to the
+[Pass 2] ACTION:    open_<action_78>_<action_147>_<action_95><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_141><action_141><action_141><end_of_utterance>
+[수정 여부] 수정됨: x_move(117→78), y_move(133→147), z_move(170→95), roll(18→222), pitch(205→222), yaw(142→222), gripper(255→222)
+  [G2 S6] The action that should be performed is to place a black bowl on the table to the left of the camera, then open the gripper.
+  [G2 S6] action: [-0.384  0.157 -0.251  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action of placing a bowl on a plate is a straightforward task that 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221>_<action_95>_<action_221>_<action_221>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_
+[수정 여부] 수정됨: x_move(163→99), y_move(104→99), z_move(127→99), roll(138→95), pitch(137→95), yaw(142→95), gripper(127→95)
+  [G2 S7] The proposed action of placing a bowl on a plate is a straightforward task that can be completed with a precision of 0.00 units. However, the action is performed with a slight deviation of 0.12 units in the roll and
+  [G2 S7] action: [-0.22  -0.22  -0.22  -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is incorrect, it is not being performed as a 3d model. It is not corr
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(163→99), y_move(90→99), z_move(127→99), roll(146→99), pitch(106→99), yaw(66→99), gripper(127→99)
+  [G2 S8] The action is incorrect, it is not being performed as a 3d model. It is not correct to add the direction of movement vectors and not to include the axis around which the object is moving.
+  [G2 S8] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not correctly written. It should be: pick________________
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_147>_<action_147>_<action_147>_<action_147>_<action_147>_<action_99>_<action_99>_<action_99>_<action_99><end_of_utterance>
+[수정 여부] 수정됨: x_move(117→99), y_move(133→99), z_move(130→147), roll(99→147), pitch(71→147), yaw(130→147), gripper(127→147)
+  [G2 S9] The proposed action is not correctly written. It should be: pick___________________
+  [G2 S9] action: [-0.22  -0.22   0.157  0.157  0.157  0.157  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action proposed is not correct because the x, y, z coordinates are not in th
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(114→99), y_move(143→99), z_move(116→99), roll(41→99), pitch(146→99), yaw(142→99), gripper(178→99)
+  [G2 S10] The action proposed is not correct because the x, y, z coordinates are not in the correct order. So the action proposed is not correct.
+  [G2 S10] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is to place a black bowl on the table in the center of the r
+[Pass 2] ACTION:    move_<action_95>_<action_95>_<action_95><action_222><action_222><action_48><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_222><action_141><action_222><action_141><action_222><action_189><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222>
+[수정 여부] 수정됨: x_move(122→95), y_move(104→95), z_move(67→95), roll(55→222), pitch(99→222), yaw(117→48), gripper(144→222)
+  [G2 S11] The proposed action is to place a black bowl on the table in the center of the room, while taking a step back and an additional step, to make sure that the bowl is positioned in the center.
+  [G2 S11] action: [-0.251 -0.251 -0.251  0.745  0.745 -0.62   0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: RI is asking for a rotation vector of 0.04 in yz plane, 0.18 in xz plane, 0.02 i
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[Pass 2] ACTION:   <action_50><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_141><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222>
+[수정 여부] 수정됨: x_move(122→50), y_move(104→222), z_move(124→222), roll(150→222), pitch(137→222), yaw(142→222), gripper(127→222)
+  [G2 S12] RI is asking for a rotation vector of 0.04 in yz plane, 0.18 in xz plane, 0.02 in yz plane, 0.18 in xz plane,
+  [G2 S12] action: [-0.604  0.745  0.745  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action of picking up the black bowl from the table center, placing 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(104→99), z_move(128→99), roll(129→99), pitch(137→99), yaw(132→99), gripper(129→99)
+  [G2 S13] The proposed action of picking up the black bowl from the table center, placing it on the plate, and rolling it to the right is not a correct action.
+  [G2 S13] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not a good idea, because it will not allow the person to 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_147>_<action_147>_<action_147>_<action_147>_<action_147>_<action_147>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(117→99), y_move(155→99), z_move(134→99), roll(62→99), pitch(137→99), yaw(142→147), gripper(127→147)
+  [G2 S14] The proposed action is not a good idea, because it will not allow the person to place the bowl on the table, but instead will place it on the table, which is not the correct place.
+  [G2 S14] action: [-0.22  -0.22  -0.22  -0.22  -0.22   0.157  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is trying to place a black bowl on a plate. It is trying to do it by 
+[Pass 2] ACTION:    pick_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_95>_<action_95><action_205><action_205><action_16>
+[수정 여부] 수정됨: x_move(164→99), y_move(109→95), z_move(199→95), roll(129→95), pitch(137→95), yaw(142→221), gripper(255→221)
+  [G2 S15] The action is trying to place a black bowl on a plate. It is trying to do it by rolling the ball a certain amount, pitching it a certain amount, and then opening the gripper to pick it up.
+  [G2 S15] action: [-0.22  -0.251 -0.251 -0.251 -0.251  0.737  0.737]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: This action involves picking up the black bowl from the table at the center of t
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222>_<action_95><action_222>_<action_86><action_222><action_231><action_222><action_245><action_222><action_222><action_141><action_222><action_141><action_222><action_222><action_222><action_189><action_222><action_222><action_141><action_189><action_205><action_222><action_222><action_222><action_205><action_205><action_205><action_175>
+[수정 여부] 수정됨: x_move(117→99), y_move(159→99), z_move(134→95), roll(54→222), pitch(102→95), yaw(142→222), gripper(136→86)
+  [G2 S16] This action involves picking up the black bowl from the table at the center of the room, placing it on a plate to the right of the central table, and then flipping the plate to a different angle. This action seems to aim to achieve a more
+  [G2 S16] action: [-0.22  -0.22  -0.251  0.745 -0.251  0.745 -0.322]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The robot moves forward to the table to pick up a black bowl from a table and pl
+[Pass 2] ACTION:    pick_<action_99>_<action_95><action_222><action_222><action_148><action_222><action_222><action_141><action_222><action_141><action_222><action_141><action_222><action_141><action_222><action_141><action_222><action_141><action_86><action_222><action_222><action_189><action_205><action_222><action_222><action_141><action_86><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_175><action_222>
+[수정 여부] 수정됨: x_move(117→99), y_move(133→95), z_move(130→222), roll(99→222), pitch(71→148), yaw(130→222), gripper(127→222)
+  [G2 S17] The robot moves forward to the table to pick up a black bowl from a table and place it on a plate.
+  [G2 S17] action: [-0.22  -0.251  0.745  0.745  0.165  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of rolling the black bowl is the closest option to picking up the bow
+[Pass 2] ACTION:    place_<action_99>_<action_99><end_of_utterance>
+[파싱 실패] <action_N> 미생성 → cold start 페널티 대상
+[수정 여부] 수정됨: x_move(129→128), y_move(95→128), z_move(150→128), roll(129→128), pitch(255→128), yaw(179→128), gripper(125→128)
+  [G2 S18] The action of rolling the black bowl is the closest option to picking up the bowl from the table center and placing it on the plate, but rolling it is the least direct action of picking up the bowl from table center.
+  [G2 S18] action: [0.008 0.008 0.008 0.008 0.008 0.008 0.008]
+==================================================
+  [reward] 파싱 실패 → -1.0
+==================================================
+[Pass 1] CRITIQUE: The action is not the easiest to execute. A quick look at the 3D model suggests 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(104→99), z_move(137→99), roll(129→99), pitch(137→99), yaw(132→99), gripper(116→99)
+  [G2 S19] The action is not the easiest to execute. A quick look at the 3D model suggests that there may not be a 3D model available to use for the model to be rendered.
+  [G2 S19] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action in the question is to move the black bowl which is on the le
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(129→99), y_move(120→99), z_move(116→99), roll(117→99), pitch(142→99), yaw(145→99), gripper(127→99)
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [G2 S20] The proposed action in the question is to move the black bowl which is on the left of the table, and drop it, and then place it on the right side of the table. This action would result in a change in the position of the object
+  [G2 S20] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: the proposed action will be to place the black bowl on the table at a 0.02 dista
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(129→99), y_move(120→99), z_move(135→99), roll(129→99), pitch(148→99), yaw(129→99), gripper(127→99)
+  [G2 S21] the proposed action will be to place the black bowl on the table at a 0.02 distance from the table, in a 0.05 direction from the table, on a 0.06 pitch and 0.1
+  [G2 S21] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is not correct. It is not picking up, not rolling, not pitching, nor 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(129→99), y_move(182→99), z_move(150→99), roll(75→99), pitch(158→99), yaw(134→99), gripper(127→99)
+  [G2 S22] The action is not correct. It is not picking up, not rolling, not pitching, nor yawing the object.
+  [G2 S22] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action here is to place the black bowl on the center of the table i
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(112→99), z_move(173→99), roll(129→99), pitch(129→99), yaw(149→99), gripper(126→99)
+  [G2 S23] The proposed action here is to place the black bowl on the center of the table in the direction of the table. There is no indication that it is picking up from the table.
+  [G2 S23] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action of moving the black bowl from the table at the center to the
+[Pass 2] ACTION:    move_<action_99><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205>
+[수정 여부] 수정됨: x_move(117→99), y_move(133→222), z_move(230→222), roll(58→222), pitch(242→222), yaw(134→222), gripper(255→222)
+  [G2 S24] The proposed action of moving the black bowl from the table at the center to the plate at the bottom, placing the bowl on top of it, is the correct action.
+  [G2 S24] action: [-0.22   0.745  0.745  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: the action proposed is to place a black bowl in a table center, but it is not th
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(109→99), z_move(149→99), roll(126→99), pitch(161→99), yaw(113→99), gripper(142→99)
+  [G2 S25] the action proposed is to place a black bowl in a table center, but it is not the most common or practical action to do, especially since it wouldn't fit in the space and would not be able to hold the bowl. it would also not
+  [G2 S25] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is a simple manipulation of a 3D object in 3D space. It is a 3D manip
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_147>_<action_147>_<action_224>_<action_224>_<action_224>_<action_224>_<action_99><end_of_utterance>
+[수정 여부] 수정됨: x_move(177→99), y_move(111→99), z_move(127→99), roll(129→99), pitch(137→99), yaw(129→147), gripper(138→147)
+  [G2 S26] The action is a simple manipulation of a 3D object in 3D space. It is a 3D manipulation of the object on a flat surface.
+  [G2 S26] action: [-0.22  -0.22  -0.22  -0.22  -0.22   0.157  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is to place a black bowl on a plate, with coordinates x=
+[Pass 2] ACTION:    1<action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_175><action_189><action_222><action_222><action_141><action_214><action_214><action_214><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99>
+[수정 여부] 수정됨: x_move(146→222), y_move(119→222), z_move(137→222), roll(120→222), pitch(235→222), yaw(154→222), gripper(131→222)
+  [G2 S27] The proposed action is to place a black bowl on a plate, with coordinates x=
+  [G2 S27] action: [0.745 0.745 0.745 0.745 0.745 0.745 0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action of rolling a black bowl to its right on the table is not a c
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(149→99), y_move(104→99), z_move(242→99), roll(147→99), pitch(129→99), yaw(142→99), gripper(115→99)
+  [G2 S28] The proposed action of rolling a black bowl to its right on the table is not a correct or appropriate task to perform. The proposed action would cause the object to roll to the left.
+  [G2 S28] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is to place a black bowl on a table in the center of the roo
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(149→99), z_move(226→99), roll(97→99), pitch(29→99), yaw(207→99), gripper(108→99)
+  [G2 S29] The proposed action is to place a black bowl on a table in the center of the room, then roll a roll of tape to the right of the bowl, then roll the roll back to the bowl, and finally place the bowl at the top of
+  [G2 S29] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is the right hand of a gripper, which has a 3-DOF joint, wit
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(113→99), z_move(183→99), roll(100→99), pitch(138→99), yaw(129→99), gripper(127→99)
+  [G2 S30] The proposed action is the right hand of a gripper, which has a 3-DOF joint, with roll, pitch, and yaw values of -0.21, x, and y, respectively.
+  [G2 S30] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is attempting to place the bowl on the table in a balanced position.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221>_<action_95>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_221>_<action_95>_<action_95>_<action_95>_
+[수정 여부] 수정됨: x_move(143→99), y_move(109→99), z_move(127→95), roll(129→95), pitch(158→95), yaw(123→95), gripper(142→95)
+  [G2 S31] The action is attempting to place the bowl on the table in a balanced position.
+  [G2 S31] action: [-0.22  -0.22  -0.251 -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: Pick up the black bowl from the table, position it on the table, and open the gr
+[Pass 2] ACTION:    pick_<action_99>_<action_99><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_222><action_141><action_222><action_141><action_222><action_141><action_222><action_189><action_205><action_205><action_205><action_175><action_222><action_205><action_175><action_222><action_214><action_222><action_205><action_175><action_214><action_214>
+[수정 여부] 수정됨: x_move(117→99), y_move(135→99), z_move(170→222), roll(38→222), pitch(178→222), yaw(120→222), gripper(255→222)
+  [G2 S32] Pick up the black bowl from the table, position it on the table, and open the gripper to pick it up.
+  [G2 S32] action: [-0.22  -0.22   0.745  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The task is to pick up a black bowl from the table center and place it on a plat
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_95><action_222>Front<action_86><action_222><action_111><action_222><action_189><action_222><action_141><action_222><action_141><action_222><action_222><action_222><action_222><action_222><action_205><action_222><action_222><action_205><action_205><action_205><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(117→99), y_move(115→99), z_move(138→95), roll(91→222), pitch(151→86), yaw(154→222), gripper(135→111)
+  [G2 S33] The task is to pick up a black bowl from the table center and place it on a plate. The coordinates are (-0.08, -0.09, 0.09) and the roll is (-0.28
+  [G2 S33] action: [-0.22  -0.22  -0.251  0.745 -0.322  0.745 -0.125]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of picking up the black bowl from the table in the center, placing it
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_208>_<action_208>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(112→99), y_move(115→99), z_move(127→99), roll(129→99), pitch(137→208), yaw(148→208), gripper(134→99)
+  [G2 S34] The action of picking up the black bowl from the table in the center, placing it on the plate, and then rolling the gripper to open it has no real bearing on the orientation of the task.
+  [G2 S34] action: [-0.22  -0.22  -0.22  -0.22   0.635  0.635 -0.22 ]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action is attempting to place the black bowl on the table, but the proposal 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_208>_<action_147>_<action_147>_<action_224>_<action_224>_<action_224>_<action_224>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(113→99), z_move(127→99), roll(129→99), pitch(129→99), yaw(116→208), gripper(137→147)
+  [G2 S35] The action is attempting to place the black bowl on the table, but the proposal suggests a different setting with a chair and a table. The action is not recommended due to the proposed position being against the chair and the table.
+  [G2 S35] action: [-0.22  -0.22  -0.22  -0.22  -0.22   0.635  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is incorrect. The task is to place the black bowl on top of 
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(124→99), z_move(203→99), roll(55→99), pitch(197→99), yaw(172→99), gripper(127→99)
+  [G2 S36] The proposed action is incorrect. The task is to place the black bowl on top of the plate, which is not the correct action.
+  [G2 S36] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is not the most straightforward. The gripper is not close enough to t
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(124→99), z_move(211→99), roll(49→99), pitch(197→99), yaw(139→99), gripper(127→99)
+  [G2 S37] The action is not the most straightforward. The gripper is not close enough to the table, it moves to the right. It's not the most obvious action.
+  [G2 S37] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+==================================================
+[Pass 1] CRITIQUE: Pick up the black bowl from the table and place it on the plate.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_141><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_86><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(117→99), y_move(115→99), z_move(122→222), roll(129→222), pitch(70→222), yaw(173→222), gripper(165→222)
+  [G2 S38] Pick up the black bowl from the table and place it on the plate.
+  [G2 S38] action: [-0.22  -0.22   0.745  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of picking up the black bowl from the table and placing it on the pla
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99><end_of_utterance>
+[파싱 실패] <action_N> 미생성 → cold start 페널티 대상
+[수정 여부] 수정됨: x_move(121→128), y_move(104→128), z_move(133→128), roll(95→128), pitch(97→128), yaw(56→128), gripper(153→128)
+  [G2 S39] The action of picking up the black bowl from the table and placing it on the plate is the only action that is not specified in the task.
+  [G2 S39] action: [0.008 0.008 0.008 0.008 0.008 0.008 0.008]
+==================================================
+  [reward] 파싱 실패 → -1.0
+==================================================
+[Pass 1] CRITIQUE: This is the first question I see. The action is to place the bowl on the plate. 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(121→99), y_move(133→99), z_move(163→99), roll(83→99), pitch(137→99), yaw(100→99), gripper(142→99)
+  [G2 S40] This is the first question I see. The action is to place the bowl on the plate. I believe the action is taking place in a 3D modeling software.
+  [G2 S40] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action "_______________________
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(156→99), z_move(149→99), roll(66→99), pitch(129→99), yaw(108→99), gripper(138→99)
+  [G2 S41] The proposed action "_______________________
+  [G2 S41] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action "_______________________
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_147>_<action_147>_<action_147>_<action_147>_<action_147>_<action_147>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(113→99), z_move(127→99), roll(129→99), pitch(137→147), yaw(86→147), gripper(142→147)
+  [G2 S42] The action "_______________________
+  [G2 S42] action: [-0.22  -0.22  -0.22  -0.22   0.157  0.157  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is placing a black bowl on a table and then rolling the bowl
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(124→99), z_move(203→99), roll(55→99), pitch(158→99), yaw(142→99), gripper(127→99)
+  [G2 S43] The proposed action is placing a black bowl on a table and then rolling the bowl.
+  [G2 S43] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: A ball is being rolled down a ramp.
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_78>_<action_224>_<action_224>_<action_224>_<action_99>_<action_99>_<action_78>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(121→99), y_move(104→99), z_move(133→99), roll(95→78), pitch(97→224), yaw(36→224), gripper(142→224)
+  [G2 S44] A ball is being rolled down a ramp.
+  [G2 S44] action: [-0.22  -0.22  -0.22  -0.384  0.761  0.761  0.761]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action to place the black bowl on the plate is incorrect. The actio
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_78>_<action_78>_<action_147>_<action_147>_<action_224>_<action_224>_<action_224>_<action_78>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(124→99), z_move(122→99), roll(117→78), pitch(137→78), yaw(97→147), gripper(138→147)
+  [G2 S45] The proposed action to place the black bowl on the plate is incorrect. The action should be to place a bowl on a plate.
+  [G2 S45] action: [-0.22  -0.22  -0.22  -0.384 -0.384  0.157  0.157]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is to roll the black bowl from the table center to the tip o
+[Pass 2] ACTION:    Task: pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(124→99), z_move(122→99), roll(31→99), pitch(116→99), yaw(2→99), gripper(127→99)
+  [G2 S46] The proposed action is to roll the black bowl from the table center to the tip of the black bowl, then to place the black bowl on the plate at the tip of the black bowl.
+  [G2 S46] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: This action involves placing a black bowl on a table and then placing the bowl o
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_78><action_222><action_222><action_190><action_222><action_231><action_222><action_231><action_222><action_231><action_222><action_245><action_245><action_245><action_222><action_222><action_222><action_222><action_205><action_205><action_189><action_205><action_189><action_189><action_189><action_189><action_189><action_189><action_189><action_189><action_189><action_189>
+[수정 여부] 수정됨: x_move(166→99), y_move(124→99), z_move(122→78), roll(117→222), pitch(137→222), yaw(97→190), gripper(137→222)
+  [G2 S47] This action involves placing a black bowl on a table and then placing the bowl on a plate.
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [G2 S47] action: [-0.22  -0.22  -0.384  0.745  0.745  0.494  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action that this task is asking you to perform is to pick up a black bowl fr
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(164→99), y_move(115→99), z_move(137→99), roll(128→99), pitch(218→99), yaw(142→99), gripper(168→99)
+  [G2 S48] The action that this task is asking you to perform is to pick up a black bowl from a table, place it on a plate, and then roll, pitch, yaw, and roll it again.
+  [G2 S48] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action has a small amount of roll, pitch, and yaw. This could be interpreted
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(166→99), y_move(165→99), z_move(92→99), roll(129→99), pitch(187→99), yaw(239→99), gripper(98→99)
+  [G2 S49] The action has a small amount of roll, pitch, and yaw. This could be interpreted as a small maneuver or a small maneuver.
+  [G2 S49] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of the proposed action is a roll down, pitch up, roll back, and then 
+[Pass 2] ACTION:    pick_<action_99>_<action_95><action_222><action_86><action_222><action_222><action_222><action_148><action_222><action_222><action_222><action_141><action_222><action_141><action_141><action_189><action_141><action_141><action_189><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_222><action_222>
+[수정 여부] 수정됨: x_move(121→99), y_move(104→95), z_move(133→222), roll(95→86), pitch(111→222), yaw(107→222), gripper(142→222)
+  [G2 S50] The action of the proposed action is a roll down, pitch up, roll back, and then the gripper is opened.
+  [G2 S50] action: [-0.22  -0.251  0.745 -0.322  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+  [VRAM 학습 시작 전] alloc=606MB reserved=684MB peak=606MB
+  [loss] 0.1726 | adv=0.707 | action_tokens=18/7
+  [loss] 0.6234 | adv=0.707 | action_tokens=26/7
+  [loss] 2.1884 | adv=0.707 | action_tokens=8/7
+  [loss] 0.1302 | adv=0.707 | action_tokens=19/7
+  [loss] 0.0992 | adv=0.707 | action_tokens=19/7
+  [loss] -0.1341 | adv=-0.707 | action_tokens=18/7
+  [loss] -0.1357 | adv=-0.707 | action_tokens=19/7
+  [loss] -0.1073 | adv=-0.707 | action_tokens=19/7
+  [loss] -0.1594 | adv=-0.707 | action_tokens=19/7
+  [loss] -0.9187 | adv=-0.707 | action_tokens=37/7
+  [VRAM 학습 종료 후] alloc=1195MB reserved=1296MB peak=7135MB
+
+[에피소드 2/60]
+==================================================
+[Pass 1] CRITIQUE: This action is performed to put the black bowl, which is placed on the table cen
+[Pass 2] ACTION:    pick_up_the_<action_99>_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_116><action_205><action_205><action_205><action_205><action_205>
+[수정 여부] 수정됨: x_move(112→99), y_move(111→99), z_move(138→99), roll(115→95), pitch(117→95), yaw(142→95), gripper(142→95)
+  [G1 S1] This action is performed to put the black bowl, which is placed on the table center to the left of the room, on the table.
+  [G1 S1] action: [-0.22  -0.22  -0.22  -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not possible because x, y, z are not in the range of the 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_95>_<action_95>_<action_95>_<action_95>_<action_221><action_81><action_81><end_of_utterance>
+[수정 여부] 수정됨: x_move(112→99), y_move(111→99), z_move(138→99), roll(115→95), pitch(107→95), yaw(142→95), gripper(129→95)
+  [G1 S2] The proposed action is not possible because x, y, z are not in the range of the table.
+  [G1 S2] action: [-0.22  -0.22  -0.22  -0.251 -0.251 -0.251 -0.251]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not performed in a typical manner. It is not a simple mov
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(122→99), y_move(149→99), z_move(127→99), roll(86→99), pitch(137→99), yaw(138→99), gripper(144→99)
+  [G1 S3] The proposed action is not performed in a typical manner. It is not a simple movement task of picking up an object and placing it on a table. It is not a simple movement task without a clear goal or a complete task.
+  [G1 S3] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: The action you proposed is incorrect because the problem does not have a zero ya
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(115→99), z_move(170→99), roll(93→99), pitch(197→99), yaw(129→99), gripper(86→99)
+  [G1 S4] The action you proposed is incorrect because the problem does not have a zero yaw, pitch, roll, or g-axis.
+  [G1 S4] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action can be described as placing the black bowl to the left of th
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(111→99), z_move(178→99), roll(119→99), pitch(182→99), yaw(148→99), gripper(93→99)
+  [G1 S5] The proposed action can be described as placing the black bowl to the left of the plate on the table and adjusting the position of the plate for a better view.
+  [G1 S5] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is to pick up a bowl from a table, place it on a plate, but then the 
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[Pass 2] ACTION:    pick_<action_99>_<action_95><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_189><action_121><action_189><action_214><action_214><action_214><action_214><action_214><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99><action_99>
+[수정 여부] 수정됨: x_move(170→99), y_move(109→95), z_move(176→222), roll(129→222), pitch(218→222), yaw(134→222), gripper(255→222)
+  [G1 S6] The action is to pick up a bowl from a table, place it on a plate, but then the action is to place the bowl back on the table.
+  [G1 S6] action: [-0.22  -0.251  0.745  0.745  0.745  0.745  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is attempting to grab the black bowl from the table center and then p
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_95><action_222>_<action_95><action_222>_<action_95><action_222>_<action_86><action_222><action_231><action_222><end_of_utterance>
+[수정 여부] 수정됨: x_move(177→99), y_move(96→99), z_move(162→99), roll(129→95), pitch(162→222), yaw(60→95), gripper(140→222)
+  [G1 S7] The action is attempting to grab the black bowl from the table center and then place it on the plate. However, the action is not taking into account for the position of the table and the dimensions of the bowl.
+  [G1 S7] action: [-0.22  -0.22  -0.22  -0.251  0.745 -0.251  0.745]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not a valid one. The act of picking up a bowl from the ta
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(112→99), z_move(207→99), roll(76→99), pitch(129→99), yaw(128→99), gripper(76→99)
+  [G1 S8] The proposed action is not a valid one. The act of picking up a bowl from the table and placing it on a plate is not possible under the given constraints.
+  [G1 S8] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action involves picking up a black bowl from a table in the center,
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_95><action_222><action_44><action_222><action_175><action_222><action_222>Context<action_86><action_86><action_86><action_222><action_222><action_222><action_222><action_189><action_205><action_205><action_175><action_222>Context<action_86><action_189><action_205><action_189><action_189><action_222><action_222><action_222><action_141><action_222><action_141><action_222><action_222>
+[수정 여부] 수정됨: x_move(170→99), y_move(112→99), z_move(207→95), roll(76→222), pitch(129→44), yaw(59→222), gripper(142→175)
+  [G1 S9] The proposed action involves picking up a black bowl from a table in the center, placing it on a plate not on the table, and then rolling a yellow object ( to be a gripper) around the table. The action is not recommended but
+  [G1 S9] action: [-0.22  -0.22  -0.251  0.745 -0.651  0.745  0.376]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action has two issues. One issue is that the x and y axis are not a
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(124→99), z_move(207→99), roll(54→99), pitch(225→99), yaw(142→99), gripper(131→99)
+  [G1 S10] The proposed action has two issues. One issue is that the x and y axis are not aligned. The proposed action only gives the coordinates for the z axis, but it does not give the coordinates for the y and x axes. The z axis is
+  [G1 S10] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is incorrect because the question is asking to pick up the b
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(124→99), z_move(207→99), roll(56→99), pitch(225→99), yaw(162→99), gripper(127→99)
+  [G1 S11] The proposed action is incorrect because the question is asking to pick up the black bowl and place it on the plate but the problem contains information about the bowl and the plate but the action is not the correct one and does not make sense.
+  [G1 S11] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: This action does not make sense in the context of the task, as it could result i
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(124→99), z_move(226→99), roll(72→99), pitch(222→99), yaw(168→99), gripper(127→99)
+  [G1 S12] This action does not make sense in the context of the task, as it could result in the placing of a bowl on the table, but not the picking up of a bowl.
+  [G1 S12] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action of picking up the bowl from the table and placing it on the plate is 
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_95><action_222><action_167><end_of_utterance>
+[파싱 실패] <action_N> 미생성 → cold start 페널티 대상
+[수정 여부] 수정됨: x_move(170→128), y_move(112→128), z_move(203→128), roll(99→128), pitch(68→128), yaw(119→128), gripper(176→128)
+  [G1 S13] The action of picking up the bowl from the table and placing it on the plate is the most straightforward and effective action. It takes the least amount of time to perform and requires the least amount of effort. The proposal of the coordinates, y=-0
+  [G1 S13] action: [0.008 0.008 0.008 0.008 0.008 0.008 0.008]
+==================================================
+  [reward] 파싱 실패 → -1.0
+==================================================
+[Pass 1] CRITIQUE: The action is to pick up the bowl from the table, place it on the plate and roll
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(125→99), z_move(203→99), roll(51→99), pitch(255→99), yaw(176→99), gripper(127→99)
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+  [G1 S14] The action is to pick up the bowl from the table, place it on the plate and roll it.
+  [G1 S14] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is inconsistent with the task requirements. The intended tas
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(149→99), z_move(203→99), roll(176→99), pitch(59→99), yaw(140→99), gripper(129→99)
+  [G1 S15] The proposed action is inconsistent with the task requirements. The intended task is to pick up the black bowl from the table center and place it on the plate. The proposed action does not follow this task requirement.
+  [G1 S15] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is an attempt to place a bowl on a plate. However, the actio
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(177→99), y_move(164→99), z_move(171→99), roll(76→99), pitch(139→99), yaw(151→99), gripper(109→99)
+  [G1 S16] The proposed action is an attempt to place a bowl on a plate. However, the action does not seem to make sense in the context of the task, and the proposed action contradicts the task given, which does not allow for placement of the bowl on
+  [G1 S16] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action that should be performed to achieve the proposed coordinate changes i
+[Pass 2] ACTION:    roll_<action_99><action_222><action_222><action_222><action_222><action_205><action_205><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_222><action_205><action_205><action_205><action_205><action_205><action_205><action_205><action_189><action_205><action_189><action_189><action_189><action_189><action_189><action_189><action_189><action_189><action_189><action_189>
+[수정 여부] 수정됨: x_move(174→99), y_move(164→222), z_move(173→222), roll(98→222), pitch(129→222), yaw(181→205), gripper(112→205)
+  [G1 S17] The action that should be performed to achieve the proposed coordinate changes is rolling the table in the z-direction.
+  [G1 S17] action: [-0.22   0.745  0.745  0.745  0.745  0.612  0.612]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: This is a simple action that is not likely to be implemented with the current me
+[Pass 2] ACTION:    pick_up_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(141→99), y_move(108→99), z_move(173→99), roll(129→99), pitch(139→99), yaw(139→99), gripper(133→99)
+  [G1 S18] This is a simple action that is not likely to be implemented with the current method. It would be a good place to start but is not likely to be implemented based on the instructions provided.
+  [G1 S18] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2) → 0.200
+==================================================
+[Pass 1] CRITIQUE: This action is not in a physical way, but rather a command to an open gripper.
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(149→99), z_move(159→99), roll(142→99), pitch(113→99), yaw(218→99), gripper(142→99)
+  [G1 S19] This action is not in a physical way, but rather a command to an open gripper.
+  [G1 S19] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The action is trying to place a black bowl on the table in the center of the roo
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(149→99), z_move(159→99), roll(142→99), pitch(113→99), yaw(155→99), gripper(142→99)
+  [G1 S20] The action is trying to place a black bowl on the table in the center of the room. The user attempts to place the bowl on the table, but the object is rolled away and the object is placed on the table instead.
+  [G1 S20] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: Positioning the bowl on the table in a specific location, suggesting that the ac
+[Pass 2] ACTION:    pick_<action_99>_<action_99>_<action_95><action_222>_<action_95><action_222>_<action_95><action_222>_<action_99><action_222>_<action_95><action_86><action_221><action_116><action_189><action_175><action_175><action_189><action_141><action_99><action_189><action_189><action_222><action_222><action_222><action_222><action_189><action_175><action_189><action_189><action_222><action_222>
+[수정 여부] 수정됨: x_move(170→99), y_move(149→99), z_move(159→95), roll(142→222), pitch(113→95), yaw(155→222), gripper(142→95)
+  [G1 S21] Positioning the bowl on the table in a specific location, suggesting that the action can be performed while the table is in the middle of the room.
+  [G1 S21] action: [-0.22  -0.22  -0.251  0.745 -0.251  0.745 -0.251]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: The proposed action is not a viable one. The proposed action is not an action th
+[Pass 2] ACTION:    place_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_<action_99>_
+[수정 여부] 수정됨: x_move(170→99), y_move(170→99), z_move(178→99), roll(73→99), pitch(86→99), yaw(57→99), gripper(88→99)
+  [G1 S22] The proposed action is not a viable one. The proposed action is not an action that can be performed, as the coordinates given do not correspond to a physical location, and there is no way to perform the action as described. The action of placing the
+  [G1 S22] action: [-0.22 -0.22 -0.22 -0.22 -0.22 -0.22 -0.22]
+==================================================
+  [reward] critique있음(+0.2), planner이탈(-0.1) → 0.100
+==================================================
+[Pass 1] CRITIQUE: A step in the assembly process is to pick up a cup.
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
+[transformers] Kwargs passed to `processor.__call__` have to be in `processor_kwargs` dict, not in `**kwargs`
