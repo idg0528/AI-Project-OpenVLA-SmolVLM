@@ -1,6 +1,6 @@
 <h1>AIproject : 비판적 재평가 텍스트를 통한 planner Model 성능 개선 듀얼 시스템 VLA 모델 개발</h1> 
 
-> OpenVLA(Planner)와 SmolVLM 500B(Actor)을 결합한 듀얼 시스템 VLA(Vision-Language-Action) 모델.
+> OpenVLA(Planner)와 SmolVLM 500M(Actor)을 결합한 듀얼 시스템 VLA(Vision-Language-Action) 모델.
 > Planner가 생성한 action을 Actor가 **비판적으로 재평가**하여 조작 성능을 개선하는 구조를 제안하고 구현함.
 
 **Critical text And Dual System Vision Language Action Model(CADS-VLA)**
@@ -17,17 +17,13 @@
   <img src="https://img.shields.io/badge/Python-3.10-brightgreen?style=flat-square&label=Python&labelColor=%23eeeeee&color=%2355adf4"height="40"/>
 </a>
 
-## 🔎소개 및 문제 정의
+## 소개 및 문제 정의
 
-기존 단일 VLA 모델은 시각·언어 입력으로부터 곧장 action을 생성하지만,
-생성한 action이 적절한지 **스스로 검토하는 단계**가 없음. 그 결과
-장기 과제(long-horizon task)에서 한 번의 잘못된 판단이 전체 실패로 이어지기 쉬움.
+기존의 단일 VLA 모델은 시각 정보와 언어 명령을 입력받은 뒤 곧바로 action을 생성하는 구조를 가진다. 하지만 이러한 방식은 모델이 자신이 만든 action을 다시 확인하거나 수정하는 과정이 없다는 한계가 있다. 특히 여러 단계가 연속적으로 이어지는 long-horizon task에서는 초반의 작은 판단 오류가 뒤 단계까지 누적되어 전체 과제 실패로 이어질 가능성이 크다.
 
-이는 추측이 아니라 벤치마크에서 정량적으로 드러남. CoT-VLA 논문(Zhao et al., 2025)의
-LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 평가한 모델들 중
-재평가·검토 단계가 없는 단일 VLA들은 단기 과제에서는 높지만 Long suite에서만 50%대로 급락함.
+이러한 문제는 LIBERO 벤치마크 결과에서도 확인할 수 있다. Zhao et al.의 CoT-VLA 논문에서는 동일한 평가 조건인 **3 seeds × 500 episodes**에서 여러 VLA 모델의 task별 성공률을 비교하였다. 그 결과, 별도의 추론 또는 검토 단계가 없는 모델들은 Spatial, Object, Goal task에서는 비교적 높은 성능을 보였지만, Long suite에서는 성공률이 50%대까지 크게 감소하였다.
 
-**LIBERO 벤치마크 — Task 별 Success Rate (동일 평가 조건)**
+**LIBERO 벤치마크 — Task별 Success Rate**
 
 | 모델 | 추론·검토 단계 | Spatial | Object | Goal | **Long** |
 |------|:------------:|:-------:|:------:|:----:|:--------:|
@@ -36,48 +32,43 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 | OpenVLA-7B | 없음 | 84.7% | 88.4% | 79.2% | **53.7%** |
 | **CoT-VLA-7B** | **있음** (visual CoT) | 87.5% | 91.6% | 87.6% | **69.0%** |
 
-> 위 4개는 **CoT-VLA 논문 Table 1의 동일 표에서** 같은 조건으로 평가된 수치.
-> 아키텍처가 달라도(autoregressive, diffusion) 검토 단계가 없으면 Long에서 50%대로 무너지는 반면,
-> **중간 추론 단계(visual chain-of-thought)를 추가한 CoT-VLA는 같은 Long task에서 69.0%로,
-> 다른 task와의 격차가 크게 줄어듦.** 변수는 "행동 전 검토 단계의 유무".
+위 결과를 보면 Diffusion Policy, Octo, OpenVLA는 서로 다른 구조를 가진 모델임에도 불구하고, 공통적으로 action을 생성하기 전 스스로 판단을 점검하는 단계가 없다. 이 모델들은 Long task에서 모두 50%대의 성공률을 보였으며, 이는 긴 작업에서 오류가 누적되기 쉽다는 점을 보여준다. 반면 visual chain-of-thought 과정을 추가한 CoT-VLA는 Long task에서 **69.0%**의 성공률을 기록하였다. 이는 행동을 바로 실행하기보다, 중간에 판단을 검토하는 단계가 long-horizon task의 성능 저하를 완화하는 데 도움을 줄 수 있음을 의미한다.
+
+> 출처: Zhao et al., “CoT-VLA: Visual Chain-of-Thought Reasoning for VLA Models”, arXiv:2503.22020, Table 1.  
+> Diffusion Policy, Octo, OpenVLA, CoT-VLA는 모두 동일 논문에서 3 seeds × 500 episodes 조건으로 평가되었다.
 
 ---
 
-**→ 즉, "행동 전에 검토·교정하는 단계"의 유무가 long-horizon 성공률에 영향을 줌.**
-본 프로젝트의 비판적 재평가 구조는 바로 이 검토 단계를, **별도 모델(Actor)을 통한
-역할 분리** 방식으로 구현하려는 시도임.
+따라서 본 프로젝트는 long-horizon task에서 발생하는 오류 누적 문제를 줄이기 위해, action 실행 이전에 한 번 더 판단을 검토하고 보정하는 구조를 설계하는 것을 목표로 한다. 기존 단일 VLA 모델이 입력으로부터 바로 action을 생성하는 방식이라면, 본 프로젝트는 그 사이에 별도의 검토 단계를 추가하여 action의 적절성을 다시 판단하도록 구성하였다.
 
-> *(출처: Zhao et al., "CoT-VLA: Visual Chain-of-Thought Reasoning for VLA Models", arXiv:2503.22020, Table 1.
-> Diffusion Policy·Octo·OpenVLA·CoT-VLA 모두 동일 논문에서 3 seeds × 500 episodes 조건으로 평가됨.)*
+이러한 접근은 지도학습 기반 모방학습의 한계와도 관련이 있다. 모방학습 모델은 학습 데이터의 행동 분포를 기반으로 action을 예측하지만, 실제 실행 과정에서 작은 오차가 발생하면 이후 상태가 학습 데이터의 분포에서 벗어날 수 있다. 이 경우 잘못된 action이 연속적으로 발생하며, 긴 시퀀스 전체의 성공률이 낮아질 수 있다. 따라서 중간에 action을 다시 점검하고 수정하는 과정은 오류 누적을 줄이는 데 중요한 역할을 할 수 있다.
 
-원인은 명확함 — 지도학습 기반 모방학습은 긴 시퀀스에서 오류 누적에 취약해,
-초기의 사소한 실수가 과제 전체 실패로 이어지기 때문. 중간에 자신의 판단을
-되짚는 단계가 이 누적을 끊어 매 순간 바로잡을 수 있음.
+본 프로젝트에서는 이러한 문제를 **역할 분리 기반 듀얼 시스템 구조**로 해결하고자 하였다.
 
-본 프로젝트는 이를 **역할 분리**로 해결.
+- **Planner (OpenVLA)**  
+  시각 정보와 언어 명령을 기반으로 1차 action을 생성한다.
 
-- **Planner (OpenVLA)** — 1차 action을 빠르게 제안
-- **Actor (SmolVLM 500B)** — Planner의 제안을 비판적 재평가 텍스트와 함께 검토하고 교정
+- **Actor (SmolVLM 500M)**  
+  Planner가 제안한 action을 그대로 실행하지 않고, 현재 상황에 적절한지 검토한 뒤 필요한 경우 수정된 action을 생성한다.
 
-이는 사람의 "생각 → 점검 → 실행" 흐름을 모방한 듀얼 시스템 구조.
+즉, 전체 구조는 사람이 행동하기 전에 “생각하고, 점검하고, 실행하는 과정”을 모델 구조 안에 반영하려는 시도이다. Planner는 빠르게 action을 제안하고, Actor는 그 action을 비판적으로 재평가하여 최종 행동을 보정하는 역할을 담당한다.
 
 ---
 
-이 프로젝트는 **모델 아키텍처와 파이프라인 구현을 완료**했으며, 학습은 자원(컴퓨팅·시간) 제약으로 다음 단계까지 진행함.
+본 프로젝트에서는 듀얼 시스템 VLA 구조를 설계하고, Planner와 Actor가 연결되어 동작하는 전체 파이프라인을 구현하였다. 다만 컴퓨팅 자원과 학습 시간의 제약으로 인해 대규모 강화학습과 LIBERO-long 정량 평가는 향후 과제로 남겨두었다.
 
-| 단계 | 상태 |
+| 단계 | 진행 상태 |
 |------|------|
-| 듀얼 시스템 아키텍처 설계 | ✅ 완료 |
-| Planner(OpenVLA) 추론 파이프라인 | ✅ 완료 |
-| Actor(SmolVLM 500B) 구성 (토크나이저 확장 · projection layer) | ✅ 완료 |
-| ZeroMQ 기반 프로세스 간 통신 | ✅ 완료 |
-| **SFT — Actor의 action token 출력 + 텍스트 생성 능력** | 🟡 일부 학습, **정성적 동작 확인 완료** |
-| GRPO 강화학습 | ⬜ 미진행 (코드는 구현, 대규모 학습 미실행) |
-| LIBERO-long 정량 평가 | ⬜ 미진행 (컴퓨팅 자원 제약) |
+| 듀얼 시스템 아키텍처 설계 | 완료 |
+| Planner(OpenVLA) 추론 파이프라인 구현 | 완료 |
+| Actor(SmolVLM 500M) 구성 | 완료 |
+| Actor 토크나이저 확장 및 projection layer 구성 | 완료 |
+| ZeroMQ 기반 Planner-Actor 통신 구조 | 완료 |
+| **SFT를 통한 action token 출력 및 텍스트 생성 학습** | 일부 진행, 정성적 동작 확인 완료 |
+| GRPO 강화학습 | 코드 구현 완료, 대규모 학습 미진행 |
+| LIBERO-long 정량 평가 | 컴퓨팅 자원 제약으로 미진행 |
 
-> 즉, **"끝까지 동작하는 시스템을 만들고, 핵심 학습 단계가 의도대로 작동함을 검증한"** 단계.
-> 정량적 벤치마크 결과는 향후 과제임.
-
+정리하면, 본 프로젝트는 단순히 새로운 구조를 제안하는 것에 그치지 않고, Planner가 action을 생성하고 Actor가 이를 다시 검토하는 듀얼 시스템 파이프라인을 실제로 구현한 데 의의가 있다. 또한 SFT 단계에서 Actor가 action token과 텍스트 출력을 함께 생성하는 방향으로 학습되는 것을 확인하였다. 최종적인 성능 향상 여부는 향후 대규모 GRPO 학습과 LIBERO-long 벤치마크 평가를 통해 추가적으로 검증할 필요가 있다.
 ---
 **Planner** : OpenVLA 7B fine tuning + 4bit, Frozen, CPU inference 
 
@@ -88,7 +79,7 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 **Simulator** : LIBERO (libero_spatial)
 
 
-## 🦴Back Bone Model URL
+## Back Bone Model URL
 
 **- OpenVLA** : [openvla](https://github.com/openvla/openvla.git)
 
@@ -103,13 +94,44 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 ![Figure1](https://github.com/user-attachments/assets/edbb073d-d40e-452a-873f-a4de54bc41b6)
 - **1. Model Structure**
 
- 모델의 전체적 구조를 간단하게 도식화 함. planner의 openvla 모델은 forzen으로 사용. actor의 backbone 모델은 LVM 모델 중 매우 가벼운 SmolVLM 500M을 사용. Planner는 action token id를 actor로 전달. actor는 이를 openvla embedding table로 받아 projection layer를 거쳐 차원을 맞춘 뒤 image와 text를 smolvlm의 processor를 거친 임베딩과 concat함. 이후 llm을 거쳐 나온 임베딩을 detoken 과정을 거쳐 텍스트로 표현되고 로봇이 액션. 로봇의 액션 성공 실패 여부로 reward를 받아 GRPO 학습 커리큘럼을 통해 학습됨. 
+ ## 모델 전체 구조
+
+본 프로젝트의 전체 구조는 Planner와 Actor를 분리한 듀얼 시스템 형태로 구성된다.  
+Planner는 OpenVLA 모델을 사용하며, 학습하지 않고 **frozen 상태**로 유지한다. Actor의 backbone 모델로는 LVM 계열 중 비교적 가벼운 **SmolVLM 500M**을 사용하였다.
+
+Planner는 시각 정보와 언어 명령을 바탕으로 1차 action token id를 생성한다. 이후 생성된 action token id는 Actor로 전달된다. Actor는 전달받은 token id를 OpenVLA의 action embedding table을 통해 embedding으로 변환한 뒤, projection layer를 거쳐 SmolVLM의 embedding 차원에 맞게 정렬한다.
+
+동시에 image와 text 입력은 SmolVLM processor를 거쳐 embedding으로 변환된다. 이후 action embedding과 image-text embedding을 concat하여 Actor 모델에 입력한다. Actor는 이를 기반으로 Planner의 action을 검토하고, 필요한 경우 수정된 action과 critique text를 함께 생성한다.
+
+최종적으로 Actor가 출력한 결과는 detokenization 과정을 거쳐 텍스트 및 action 형태로 해석되며, 로봇은 해당 action을 실행한다. 실행 결과에 따라 성공 또는 실패 여부가 reward로 계산되고, 이 reward를 기반으로 GRPO 학습 커리큘럼을 통해 Actor를 개선하는 구조로 설계하였다.
+
+```
+
+```
+
+정리하면, Planner는 빠르게 1차 action을 제안하는 역할을 하고, Actor는 해당 action을 다시 검토하고 보정하는 역할을 담당한다. 이 구조를 통해 단일 VLA 모델이 바로 action을 실행하는 방식보다, 행동 이전에 한 번 더 판단을 점검하는 과정을 추가할 수 있다.
  
 ---
 ![Figure2](https://github.com/user-attachments/assets/15b2c0a8-c4bb-4968-bf58-09bde7475a99)
 - **2. Model Process**
 
- 모델의 전체적 프로세스를 그림으로 표현. planner는 이미지와 텍스트를 openvla 자체 llm과 vit로 처리한 뒤 action token 추론을 통해 action token id를 내보냄. actor는 이미지와 텍스트를 smolvlm 자체 llm과 vit로 처리. planner에서 받아온 action token은 openvla에서 가져온 action embedding table(frozen)을 통해 임베딩으로 변환. 이후 projection layer를 통해 smolvlm의 임베딩 차원으로 변환하여 processor와 concat함. 이때 smolvlm의 tokenizer에는 openvla의 256개 action token이 add 되어있음. 이를 과정을 거쳐 transformer에서 attention 연산을 한 뒤 디토크나이저에서 텍스트를, action token은 action vector의 형태로 로봇으로 들어가고 행동을 함. 
+ ## 모델 전체 프로세스
+
+모델의 전체 프로세스는 Planner와 Actor가 각자의 vision encoder와 language model을 사용하여 입력을 처리하고, Planner가 제안한 action token을 Actor가 다시 검토하는 방식으로 구성된다.
+
+Planner는 이미지와 텍스트를 입력으로 받아, OpenVLA 내부의 ViT와 LLM을 통해 처리한 뒤 action token을 추론하고, 최종적으로 **action token id**를 출력한다.
+
+Actor는 동일한 이미지와 텍스트를 입력으로 받아, SmolVLM 내부의 ViT와 LLM을 통해 별도로 처리한다. 이와 동시에 Planner가 생성한 action token id는 OpenVLA에서 가져온 **frozen action embedding table**을 통해 embedding으로 변환된다. 이후 이 embedding은 **projection layer**를 거쳐 SmolVLM의 embedding 차원에 맞게 변환되며, SmolVLM processor를 통해 생성된 image-text embedding과 concat된다.
+
+또한 SmolVLM의 tokenizer에는 OpenVLA의 **256개 action token**이 미리 추가되어 있어, Actor가 action token과 자연어 텍스트를 함께 다룰 수 있도록 구성하였다.
+
+이렇게 결합된 입력은 Actor의 transformer로 들어가 attention 연산을 수행하고, 최종 출력은 두 갈래로 해석된다. 하나는 **detokenization**을 거쳐 critique text 또는 자연어 텍스트로 표현되고, 다른 하나는 **action token**으로부터 action vector 형태로 변환되어 로봇 제어 입력으로 사용된다. 이후 로봇은 해당 action을 실행한다.
+
+```mermaid
+
+```
+
+정리하면, Planner는 1차 action token을 생성하는 역할을 담당하고, Actor는 이미지·텍스트 정보와 Planner의 action 정보를 함께 받아 이를 다시 해석하고 보정하는 역할을 수행한다. 이를 통해 단일 모델이 바로 행동을 생성하는 구조와 달리, 행동 이전에 한 번 더 검토하는 단계를 추가할 수 있다.
  
 ---
 ![Figure3](https://github.com/user-attachments/assets/cf47ba2e-f4df-4c42-9f32-b77c0ebf5a60)
@@ -121,7 +143,24 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 ![Figure4](https://github.com/user-attachments/assets/e5adbf70-5ef6-4e22-94d6-8828ed1dc6be)
 - **4. FLow Chart**
 
- 모델의 플로우 차트. 모델에서의 전체적인 데이터의 흐름을 표현. planner와 actor의 구조는 앞서 설명한 과정과 같아서 생략. actor와 planner에서 사용하는 이미지, 텍스트 데이터들은 모두 LIBERO 환경에서 수집됨. zeroMQ를 통해 actor가 planner 서버로 넘기는 구조. 위에 actor action tokenizer init 과정에서 256개 액션 토큰을 openvla에서 가져와 add -> action embedding table -> resieze -> projection layer 과정으로 tokenizer를 초기화 시킴. 아래 GRPO trian 과정은 RLinf의 프레임워크를 반영. collect rollout 에서 libero 환경에서의 데이터들을 그룹 사이즈만큼 수집. 이 과정에서 비판적 텍스트와 action token을 추론하여 액션을 수행하고 그에 따른 reward와 loss등을 계산하고 가중치 업데이트를 compute 과정에서 수행. 이후 이를 통해 LoRA를 학습시킴. 
+ ## 모델 플로우 차트
+
+아래 플로우 차트는 모델 내부의 전체적인 데이터 흐름을 정리한 것이다.  
+Planner와 Actor의 세부 내부 구조는 앞서 설명한 내용과 동일하므로 여기서는 생략하고, **데이터가 어떤 경로로 수집·전달·학습되는지**를 중심으로 표현하였다.
+
+Planner와 Actor에서 사용하는 이미지 및 텍스트 데이터는 모두 **LIBERO 환경**에서 수집된다.  
+실행 과정에서는 Actor가 **ZeroMQ**를 통해 Planner 서버에 요청을 보내고, Planner는 OpenVLA 기반으로 action token id를 추론하여 반환한다.
+
+또한 Actor의 tokenizer 초기화 과정에서는 OpenVLA에서 사용하는 **256개의 action token**을 가져와 SmolVLM tokenizer에 추가한다. 이후 action embedding table을 반영하고, embedding resize를 수행한 뒤 projection layer를 연결하여 Actor가 OpenVLA action token을 처리할 수 있도록 초기화한다.
+
+아래쪽 학습 흐름은 **RLinf 프레임워크 기반의 GRPO 학습 과정**을 반영한다.  
+`collect rollout` 단계에서는 LIBERO 환경에서 그룹 사이즈만큼 데이터를 수집하고, 이 과정에서 Actor는 비판적 텍스트와 action token을 함께 추론한다. 이후 action이 실제로 수행되며, 그 결과로부터 reward와 loss를 계산한다. `compute` 단계에서는 이를 바탕으로 가중치 업데이트를 수행하고, 최종적으로 **LoRA 파라미터를 학습**한다.
+
+```mermaid
+
+```
+
+정리하면, 전체 파이프라인은 **LIBERO 환경에서 데이터를 수집하고**, **Actor가 Planner와 ZeroMQ로 상호작용하며**, **Planner의 action token 정보를 Actor가 다시 활용하여 비판적 텍스트와 action을 함께 생성**하는 구조로 이루어진다. 이후 RLinf 기반 GRPO 학습을 통해 reward를 반영한 가중치 업데이트를 수행하고, 최종적으로 LoRA를 학습시키는 흐름으로 구성된다.
  
 ---
 ![Figure5](https://github.com/user-attachments/assets/1c0fbf23-fe96-475a-8827-3fd545224f3e)
@@ -136,24 +175,34 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
  바로 모델 학습으로 들어가면 모델이 텍스트 포멧과 액션토큰을 어떻게 내보내는지 알지 못함. GRPO 학습에서 계속 패널티를 받고, 수렴하지 못하는 문제 발생 가능. 그래서 SFT를 통해 기본적인 베이스 능력을 학습시킨 뒤 비판적 텍스트와 그에 따른 액션 토큰 수정을 하도록 하기 위함. 총 4개 스테이지로 구성되었고, 스테이지마다 순차적으로 학습.
 
 ---
-**핵심 기술 과제와 해결**
+## 핵심 기술 과제 및 구현 방식
 
-| 문제 | 해결 | 상태 |
+본 프로젝트에서는 OpenVLA와 SmolVLM을 하나의 듀얼 시스템으로 연결하기 위해 여러 기술적 문제를 해결해야 했다. 두 모델은 임베딩 차원, 토크나이저 구조, 실행 환경이 서로 다르기 때문에 단순히 하나의 모델처럼 연결할 수 없었다. 따라서 action token 표현 방식, 모델 간 통신 구조, 메모리 효율화, Actor 출력 형식을 중심으로 다음과 같은 구현을 진행하였다.
+
+| 기술적 문제 | 구현 방식 | 진행 상태 |
 |------|------|------|
-| OpenVLA(4096차원 action 임베딩)와 Smol 토크나이저의 임베딩 공간 불일치 | LLaVA projection layer를 참고한 **projection layer** 구현으로 차원 정합 | ✅ 완료 |
-| Smol LLM이 action을 토큰으로 다루지 못함 | LLM vocabulary에 OpenVLA의 **action token 256개 추가** | ✅ 완료 |
-| 두 모델이 독립 프로세스/환경에서 동작 | **ZeroMQ**로 프로세스 간 action token 중계 | ✅ 구현 |
-| 제한된 자원에서 7B+500B 모델 동시 운용 | 4bit 양자화 · Planner Frozen · Actor LoRA로 메모리 효율화 | ✅ 완료 |
-| Actor가 action token과 자연어를 함께 출력해야 함 | SFT로 두 출력 능력 학습 | 🟡 정성 확인 |
+| OpenVLA의 4096차원 action embedding과 SmolVLM의 embedding 공간이 서로 맞지 않음 | LLaVA 구조를 참고하여 **projection layer**를 구현하고, OpenVLA action embedding을 SmolVLM이 처리할 수 있는 차원으로 변환 | 완료 |
+| SmolVLM이 OpenVLA의 action을 토큰 단위로 처리하지 못함 | SmolVLM tokenizer vocabulary에 OpenVLA 기반 **action token 256개**를 추가 | 완료 |
+| Planner와 Actor가 서로 다른 프로세스 및 환경에서 실행됨 | **ZeroMQ**를 이용하여 Planner가 생성한 action token을 Actor로 전달하는 통신 구조 구현 | 구현 완료 |
+| 제한된 GPU 자원에서 OpenVLA-7B와 SmolVLM 500M을 함께 운용해야 함 | 4bit 양자화, Planner frozen, Actor LoRA 적용을 통해 메모리 사용량 절감 | 완료 |
+| Actor가 자연어 critique와 action token을 함께 출력해야 함 | SFT를 통해 텍스트 출력 형식과 action token 생성 능력을 함께 학습 | 정성적 확인 완료 |
 
-## 검증 결과 (Validation)
+---
 
-정량 벤치마크(success rate)는 미진행이나, 구현이 의도대로 동작함을 다음과 같이 정성적으로 확인함.
+## 검증 결과
 
-- **Actor의 action token 출력** — SFT 이후 Actor가 추가된 256개 action token을 정상적으로 생성함을 확인
-- **텍스트 생성 능력** — action token 학습 후에도 자연어 출력 능력이 일부 유지됨 확인
-  > action token 생성 능력 학습으로 인해 텍스트 생성 능력 일부 약화 
-- **End-to-end 파이프라인** — Planner → ZeroMQ → Actor로 이어지는 데이터 흐름이 동작함을 확인
+본 프로젝트에서는 컴퓨팅 자원과 학습 시간의 제약으로 인해 LIBERO benchmark 기반의 정량 success rate 평가는 수행하지 못하였다. 대신 구현한 구조가 의도한 방식대로 동작하는지를 중심으로 정성적 검증을 진행하였다.
+
+- **Action token 생성 확인**  
+  SFT 이후 Actor가 새롭게 추가된 256개의 action token을 출력할 수 있음을 확인하였다.
+
+- **자연어 출력 기능 확인**  
+  Actor가 action token만 생성하는 것이 아니라, 검토 과정에 해당하는 자연어 텍스트도 함께 출력할 수 있음을 확인하였다. 다만 action token 학습이 진행되면서 기존 자연어 생성 능력은 일부 약화되는 경향이 나타났다.
+
+- **End-to-end 파이프라인 동작 확인**  
+  Planner(OpenVLA)가 1차 action을 생성하고, 해당 action 정보가 ZeroMQ를 통해 Actor(SmolVLM 500M)로 전달되는 전체 흐름을 확인하였다.
+
+정리하면, 본 단계에서는 최종 성능 향상 여부를 수치로 입증하기보다는 Planner와 Actor가 분리된 구조에서 정상적으로 연결되는지, 그리고 Actor가 action token과 자연어 출력을 함께 수행할 수 있는지를 검증하는 데 초점을 두었다. 이를 통해 향후 GRPO 학습과 LIBERO-long 정량 평가로 확장하기 위한 기반 파이프라인을 마련하였다.
 
 ![work](https://github.com/user-attachments/assets/52948375-398b-4432-8eab-1c4049e69324)
 
@@ -161,40 +210,43 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 > 
 > 정량 평가(LIBERO-long success rate, baseline 대비 비교)와 GRPO 학습은 충분한 컴퓨팅 자원 확보 후 진행할 향후 과제.
 
-## 👷코드 구조 
+## 코드 구조
 
-**📁openvla_planner**
+### openvla_planner
 
 - **openvla inference code**
-  
-  > openvla inference만 하기 위한 코드.
-  >zeroMQ와 통합하여 서버를 열어줌.
-  >**cpu**를 사용하여 inference 할 것 이므로 cuda 사용하지 않음.
-  >transformer로 로드하면 됨.
-  >모델은 **openvla-7b-finetuned-libero-spatial** 로 로드
+
+  OpenVLA 모델의 inference를 수행하기 위한 코드이다.  
+  Planner 역할을 담당하며, ZeroMQ와 연결하여 Actor 모델로 action 정보를 전달할 수 있도록 서버 형태로 동작한다.
+
+  본 프로젝트에서는 Planner를 학습하지 않고 추론용으로만 사용하기 때문에 CUDA를 사용하지 않고 **CPU 기반 inference**로 실행하도록 구성하였다.  
+  모델은 `transformers` 기반으로 로드하며, 사용한 모델은 **openvla-7b-finetuned-libero-spatial**이다.
 
 - **action tokenizer**
-  
-  > openvla 의 action tokeinzer원본.
-  >확인하면서 코딩하기 위해 편의성으로 유지.
+
+  OpenVLA에서 사용하는 기존 action tokenizer를 확인하기 위한 코드이다.  
+  Planner가 생성하는 action token 구조를 확인하고, Actor 쪽 tokenizer 확장 및 action token 매핑 과정에서 참고하기 위해 유지하였다.
 
 ---
 
-**📁qwen_actor**
+### qwen_actor
 
 - **actor_action_tokenizer**
-  
-  > LLM tokenizer에 openvla의 256개 action token을 추가.
-  > planner의 임베딩 테이블을 가져오고 projection layer를 사용하여 qwen과 차원을 맞춰줌.
-  > Qwen processor와 concat까지 진행.
-  >**setpu**과 **forward** 함수를 보면 됨.
-  
+
+  Qwen 계열 Actor 모델이 OpenVLA의 action token을 처리할 수 있도록 tokenizer를 확장하는 코드이다.  
+  기본 LLM tokenizer에는 OpenVLA action token이 포함되어 있지 않기 때문에, OpenVLA에서 사용하는 **256개의 action token**을 vocabulary에 추가하였다.
+
+  또한 Planner의 action embedding table을 가져온 뒤, projection layer를 통해 Qwen 모델의 embedding 차원에 맞게 변환한다.  
+  이후 Qwen processor와 연결하여, Actor가 자연어 텍스트와 action token을 함께 입력 및 출력할 수 있도록 구성하였다.
+
+  주요 확인 부분은 `setup` 함수와 `forward` 함수이다.
+
 - **projection_layer**
-  
-  > openvla와 qwen2.5vl의 토크나이저 임베딩 공간이 달라서 이를 맞춰주기위한 layer.
-  > openvla의 4096차원 action 임베딩을 그냥 넣으면 차원이 안 맞음
-  > 
-  > LLaVA의 projection layer를 참고하여 구현.
+
+  OpenVLA와 Qwen2.5-VL은 서로 다른 embedding 공간을 사용하기 때문에, 두 모델을 직접 연결하면 차원 불일치 문제가 발생한다.  
+  특히 OpenVLA의 action embedding은 **4096차원**이므로, 이를 그대로 Qwen2.5-VL에 입력할 수 없다.
+
+  이를 해결하기 위해 LLaVA에서 사용되는 projection layer 구조를 참고하여, OpenVLA의 action embedding을 Qwen2.5-VL이 처리 가능한 차원으로 변환하는 layer를 구현하였다.
   >
   >  **LLaVA** : [LLaVA](https://github.com/haotian-liu/LLaVA/blob/main/llava/model/multimodal_projector/builder.py)
 
@@ -204,7 +256,7 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 
 ---
 
-**📁SmolVLM_actor**
+**SmolVLM_actor**
 
 - **smol_action_tokenizer**
 
@@ -222,7 +274,7 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 
 ---
 
-**📁train_file**
+**train_file**
 
 - **train**
 
@@ -247,7 +299,7 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 
 ---
 
-**📁SFT**
+**SFT**
 
 - **SFT**
   
@@ -255,7 +307,7 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 
 ---
 
-**📁assets**
+**assets**
 
 - **make_embeddings.py**
 
@@ -264,7 +316,7 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 
 ---
 
-**📁checkpoints**
+**checkpoints**
 
 - **sft**
 
@@ -280,12 +332,12 @@ LIBERO 평가표를 보면, **동일한 조건(3 seeds × 500 episodes)**에서 
 
 ---
 
-**📁logs**
+**logs**
 
 - 학습시 나왔던 로그들을 저장해둠. 어떻게 학습이 되었는지 기록용
 
 
-## ⏬환경 구성
+## 환경 구성
 
 ```
 #torch version (qwen)
@@ -305,7 +357,7 @@ pip install requirements_openvla.txt
 
 SmolVLM 모델 실행시 미리 구성한 qwen 환경에서 실행해도 무방함. 
 
-## 🏁실행 방법 (Getting Started)
+## 실행 방법 (Getting Started)
 ---
 
 - 모델을 실행하기 전 openvla_embeddings 파일이 필요함.openvla 환경에 진입해서 
@@ -328,7 +380,7 @@ conda activate qwen
 python train/train.py
 ```
 
-## ⚙️기타 설정
+## 기타 설정
 ---
 
 모델 실행시 vram 사용량과 train log를 기록할 수 있는 코드.
