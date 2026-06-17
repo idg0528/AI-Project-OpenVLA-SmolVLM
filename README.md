@@ -2,7 +2,7 @@
 
 > OpenVLA(Planner)와 SmolVLM 500M(Actor)을 결합한 듀얼 시스템 VLA(Vision-Language-Action) 모델.
 > Planner가 생성한 action을 Actor가 **비판적으로 재평가**하여 조작 성능을 개선하는 구조를 제안하고 구현함.
-
+> 
 **Critical text And Dual System Vision Language Action Model(CADS-VLA)**
 
 <a href="https://pytorch.org/get-started/locally/">
@@ -208,7 +208,26 @@ Planner와 Actor에서 사용하는 이미지 및 텍스트 데이터는 모두 
 
 > planner의 추론 action token을 학습 데이터로 사용하여 형식 학습. 성공적으로 7개 토큰 출력.
 > 
-> 정량 평가(LIBERO-long success rate, baseline 대비 비교)와 GRPO 학습은 충분한 컴퓨팅 자원 확보 후 진행할 향후 과제.
+> 정량 평가(LIBERO-long success rate, baseline 대비 비교)와 GRPO 학습은 충분한 컴퓨팅 자원 확보 후 진행할 향후 과제
+> 
+> ## 향후 연구 방향
+
+향후 연구에서는 다음과 같은 방향으로 프로젝트를 확장할 수 있다.
+
+1. **LIBERO-long benchmark 기반 정량 평가**  
+   OpenVLA 단독 구조와 CADS-VLA 구조를 동일 조건에서 비교하여 success rate 향상을 검증할 예정이다.
+
+2. **GRPO 기반 Actor 최적화**  
+   Actor가 Planner의 action을 단순히 따라가는 것이 아니라, reward를 기반으로 더 적절한 action을 선택하도록 강화학습을 진행할 예정이다.
+
+3. **Critique text 품질 개선**  
+   Actor가 생성하는 critique text가 실제 action 수정에 어떤 영향을 주는지 분석하고, critique의 논리성과 일관성을 높이는 방향으로 개선할 수 있다.
+
+4. **Action token과 자연어 출력 균형 조정**  
+   action token 학습으로 인해 자연어 생성 능력이 약화되지 않도록 loss weighting이나 multi-stage training 방식을 개선할 필요가 있다.
+
+5. **더 큰 Actor 모델과의 비교 실험**  
+   GPU 자원이 확보된다면 Qwen2.5VL 3B와 같은 더 큰 모델을 Actor로 사용하여 SmolVLM 500M과 성능 및 메모리 효율을 비교할 수 있다.
 
 ## 코드 구조
 
